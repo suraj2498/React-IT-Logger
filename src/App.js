@@ -9,7 +9,9 @@ import AddLogModal from './components/logs/AddLogModal';
 import EditLogModal from './components/logs/EditLogModal';
 import AddTechModal from './components/techs/AddTechModal';
 
+
 import './App.css';
+import TechlistModal from './components/techs/TechlistModal';
 
 
 
@@ -28,6 +30,7 @@ const App = () => {
           <AddLogModal />
           <AddTechModal />
           <EditLogModal />
+          <TechlistModal />
           <Logs />
         </div>
     </Fragment>

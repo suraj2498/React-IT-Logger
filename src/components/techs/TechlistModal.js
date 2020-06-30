@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Techitem from './TechItem';
+//import Techitem from './TechItem';
 import Preloader from '../layout/Preloader';
 
 const TechlistModal = () => {
@@ -9,10 +9,11 @@ const TechlistModal = () => {
 
     useEffect(() => {
         getTechs();
-    })
+        // eslint-disable-next-line
+    }, [])
 
     if(loading){
-        return <Preloader />
+        return <Preloader /> 
     }
 
     const getTechs = async () => {
@@ -25,8 +26,15 @@ const TechlistModal = () => {
     }
 
     return (
-        <div>
-            
+        <div id="tech-list-modal" className="modal">
+            <div className="modal-content">
+                <h4>Technician List</h4>
+                <ul className="collection">
+                    {!loading && techs.map(tech => (
+                        <li className="collection-item">{tech.firstName}</li>
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 }

@@ -19,7 +19,7 @@ const LogItem = ({ log }) => {
                         {log.tech} {' '}
                     </span>
                     on {' '}
-                    <Moment className="green-text" format='MMMM Do YYYYm h:mm:ss a'>
+                    <Moment className="green-text" format='MMMM Do YYYY h:mm:ss a'>
                         {log.date}
                     </Moment>
                 </span>
