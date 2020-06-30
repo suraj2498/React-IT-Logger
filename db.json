@@ -1,0 +1,47 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "Changed hard drive at 025",
+      "attention": false,
+      "date": "06-29-20",
+      "tech": "Sam Smith"
+    },
+    {
+      "id": 2,
+      "message": "Changed monitor at 012",
+      "attention": true,
+      "date": "06-27-20",
+      "tech": "Daisy Williams"
+    },
+    {
+      "id": 3,
+      "message": "Change mouse at 013",
+      "attention": false,
+      "date": "06-24-20",
+      "tech": "Tim Cook"
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstname": "Sam",
+      "lastname": "Smith"
+    },
+    {
+      "id": 2,
+      "firstname": "Daisy",
+      "lastname": "Williams"
+    },
+    {
+      "id": 3,
+      "firstname": "Tim",
+      "lastname": "Cook"
+    },
+    {
+      "firstname": "Suraj",
+      "lastname": "Kumar",
+      "id": 4
+    }
+  ]
+}
