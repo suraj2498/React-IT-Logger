@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { addLog } from '../../actions/logActions';
+import PropTypes from 'prop-types';
+import TechSelect from '../techs/TechSelect';
 import M from 'materialize-css/dist/js/materialize.min.js'
 
-const AddLogModal = () => {
+const AddLogModal = ({ addLog }) => {
 
     const [message, setMessage] = useState('');
     const [attention, setAttention] = useState(false);
@@ -11,7 +15,16 @@ const AddLogModal = () => {
         if(message === '' || tech === ''){
             M.toast({html: 'Please Enter a message and technician'})
         } else {
-            console.log(message, tech, attention);
+            const newLog = {
+                message,
+                attention,
+                tech,
+                date: new Date()
+            }
+            addLog(newLog);
+            M.toast({ html: `Log added by ${tech}` })
+
+            // Clear Fields
             setMessage('');
             setTech('');
             setAttention(false);
@@ -31,11 +44,9 @@ const AddLogModal = () => {
 
                 <div className="row">
                     <div className="input-field">
-                        <select className="browser-default" name="tech" value="tech" onChange={e => setTech(e.target.value)}>
+                        <select className="browser-default" name="tech" value={tech} onChange={e => setTech(e.target.value)}>
                             <option value="" disabled >Select Technician</option>
-                            <option value="Sam Smith">Sam Smith</option>
-                            <option value="John Doe">John Doe</option>
-                            <option value="Jane Doe">Jane Doe</option>
+                            <TechSelect/>
                         </select>
                     </div>
                 </div>
@@ -58,9 +69,13 @@ const AddLogModal = () => {
     )
 }
 
+AddLogModal.propTypes = {
+    addLog: PropTypes.func.isRequired
+}
+
 const modalStyle = {
     width: '75%',
     height: '75%'
 }
 
-export default AddLogModal;
+export default connect(null, { addLog })(AddLogModal);

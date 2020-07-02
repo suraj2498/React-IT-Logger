@@ -1,25 +1,25 @@
 {
   "logs": [
     {
-      "id": 1,
-      "message": "Changed hard drive at 025",
+      "message": "Fixed mouse at 022",
       "attention": false,
-      "date": "06-29-20",
-      "tech": "Sam Smith"
+      "tech": "Jane Doe",
+      "date": "2020-07-01T23:51:56.158Z",
+      "id": 1
     },
     {
-      "id": 2,
-      "message": "Changed monitor at 012",
-      "attention": true,
-      "date": "06-27-20",
-      "tech": "Daisy Williams"
+      "message": "Fixed monitor at workstation 021",
+      "attention": false,
+      "tech": "Jane Doe",
+      "date": "2020-07-01T23:52:14.327Z",
+      "id": 2
     },
     {
-      "id": 3,
-      "message": "Change mouse at 013",
+      "message": "Updated OS on workstation 012",
       "attention": false,
-      "date": "06-24-20",
-      "tech": "Tim Cook"
+      "tech": "John Doe",
+      "date": "2020-07-01T23:52:33.036Z",
+      "id": 3
     }
   ],
   "techs": [
@@ -32,16 +32,6 @@
       "id": 2,
       "firstName": "Daisy",
       "lastName": "Williams"
-    },
-    {
-      "id": 3,
-      "firstName": "Tim",
-      "lastName": "Cook"
-    },
-    {
-      "firstName": "Suraj",
-      "lastName": "Kumar",
-      "id": 4
     }
   ]
 }
