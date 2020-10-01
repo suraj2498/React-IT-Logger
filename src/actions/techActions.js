@@ -8,8 +8,8 @@ import {
 
 // Get techs from server
 export const getTechs = () => async dispatch => {
-    setLoading();
     try{
+        setLoading();
         const res = await fetch('/techs');
         const data = await res.json();
 
@@ -49,6 +49,27 @@ export const addTech = (tech) => async (dispatch) => {
             type: TECHS_ERROR,
             payload: err.response.statusText
         })
+    }
+}
+
+
+// Delete Techs
+export const deleteTech = (id) => async dispatch => {
+    try{
+        setLoading();
+        await fetch(`/techs/${id}`, {
+            method: 'DELETE'
+        });
+
+        dispatch({
+            type: DELETE_TECH,
+            payload: id
+        });
+    } catch (err) {
+        dispatch({
+            type: TECHS_ERROR,
+            payload: err.response.statusText
+        });
     }
 }
 

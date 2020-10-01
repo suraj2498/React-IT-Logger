@@ -1,11 +1,11 @@
 {
   "logs": [
     {
+      "id": 1,
       "message": "Fixed mouse at 022",
       "attention": false,
-      "tech": "Jane Doe",
-      "date": "2020-07-01T23:51:56.158Z",
-      "id": 1
+      "tech": "Sam Smith",
+      "date": "2020-07-02T22:27:52.263Z"
     },
     {
       "message": "Fixed monitor at workstation 021",
@@ -24,14 +24,19 @@
   ],
   "techs": [
     {
-      "id": 1,
-      "firstName": "Sam",
-      "lastName": "Smith"
-    },
-    {
       "id": 2,
       "firstName": "Daisy",
       "lastName": "Williams"
+    },
+    {
+      "firstName": "Tim",
+      "lastName": "Duncan",
+      "id": 3
+    },
+    {
+      "firstName": "Larry",
+      "lastName": "Bird",
+      "id": 4
     }
   ]
 }
